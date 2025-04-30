@@ -51,7 +51,7 @@ def get_single_post_data(post_code):
             caption = data.find(attrs={'class': 'desc'}).text.strip() # Get the caption of the post
         
         except:
-            caption = None # Post doesn't have a caption
+            caption = '' # Post doesn't have a caption
 
         timestamp = int(data.get_attribute_list('data-created')[0]) # Get the timestamp of the post
 
